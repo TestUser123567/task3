@@ -18,6 +18,12 @@ public class TitlesPanel extends JPanel implements ActionListener {
    private int start_angle = 0;
    private int shape;
 
+   /**
+    *
+    * @param _shape - цілочисельне значення, за допомогою якого ініціалізується клас ShapeFactory.
+    *     *     *                   Двохзначне число. Перше число відповідє за тип фігури.
+    *     *     *                  Друге число відповідає за колір фігури
+    */
    public TitlesPanel(int _shape) {
       this.shape = _shape;
       (this.animation = new Timer(50, this)).setInitialDelay(50);
@@ -31,6 +37,10 @@ public class TitlesPanel extends JPanel implements ActionListener {
 
    }
 
+   /**
+    *
+    * @param g - обєкт який вимальовуєтьс під час роботи програми
+    */
    private void doDrawing(Graphics g) {
       this.is_done = false;
       (this.g2d = (Graphics2D)g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);

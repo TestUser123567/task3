@@ -16,6 +16,12 @@ public class ShapeFactory {
    public int width = 25;
    public int height = 25;
 
+   /**
+    *
+    * @param shape_type - цілочисельне значення, за допомогою якого ініціалізується клас.
+    *     *                   Двохзначне число. Перше число відповідє за тип фігури.
+    *     *                  Друге число відповідає за колір фігури
+    */
    public ShapeFactory(int shape_type) {
       switch(shape_type / 10) {
       case 1:
@@ -69,6 +75,14 @@ public class ShapeFactory {
 
    }
 
+   /**
+    *
+    * @param arms - кількість вершин
+    * @param center - центер зірки
+    * @param rOuter - зовнішній радіус
+    * @param rInner - внутрішній радіус
+    * @return Object - повертає обєкт типу Shapr зірку.
+    */
    private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
       double angle = 3.141592653589793D / (double)arms;
       GeneralPath path = new GeneralPath();
